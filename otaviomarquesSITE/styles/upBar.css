@@ -1,0 +1,98 @@
+body{
+	margin: 0;
+	height: 100000;
+}
+
+.upSideBar {
+	background-color:rgb(255, 255, 255);
+	width: 100vw;
+	height: 100px;
+	position: fixed;
+}
+
+.logoBar {
+	position: fixed;
+	width: 90px;
+	height: 90px;
+	margin-top: 5px;
+	margin-left: 100px;
+}
+@media screen and (max-width:639px){
+	.logoBar{
+		margin-left: 45px;
+	}
+}
+
+.btnBar{
+	position:fixed;
+	top: 4vh;
+	max-height: 50px;
+}
+@media screen and (min-width:1073px) {
+	.btnBar{
+		left: 60lvw;
+	}
+}
+@media screen and (max-width:1072px) {
+	.btnBar{
+		left: 50lvw;
+	}	
+}
+@media screen and (max-width:856px){
+	.btnBar{
+		left: 30lvw;
+	}	
+}
+
+.btnBarOpt{
+	height: 50px;
+	width: 100px;
+	background-color: rgb(255, 255, 255);
+	border-style: hidden;
+	font-size: 15px;
+}
+
+.btnBarOpt:hover{
+	border-left-style: solid;
+	border-right-style: solid;
+	border-left-width: 2;
+	border-right-width: 2;
+	color:brown;
+}
+
+@media screen and (max-width:639px){
+	.btnBarOpt{
+		width: 80px;
+		font-size: 12px;
+	}
+}
+
+.btnServico{
+	position: relative;
+	display: inline-block;
+}
+
+.menuServico{
+	display: none;
+	position: absolute;
+	height: fit-content;
+	width: 90px;
+
+}
+.menuServico button{
+	color: black;
+	text-decoration: none;
+	background-color: white;
+	height: fit-content;
+	width: 90px;
+
+	border: 1;
+}
+.menuServico button:hover{
+	text-decoration: underline;
+
+}
+
+.btnServico:hover{
+	.menuServico{display: block;}
+}
