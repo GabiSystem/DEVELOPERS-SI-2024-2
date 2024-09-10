@@ -1,0 +1,48 @@
+body{
+    background-color: green;
+    margin: 0;
+}
+.centerPage{
+    background-color: white;
+    border: 0;
+    top: 100px;
+    position: fixed;
+    height: 100vh;
+    word-wrap: break-word;
+    white-space: normal;
+}
+.downBar{
+    background-color: rgb(132, 155, 132);
+    width: 100vw;
+    height: 6cm;
+    position: absolute;
+    bottom: 0;
+
+}
+@media screen and (min-width:1280px) {
+    .centerPage{
+        width: 75vw;
+        left: 12.5vw;
+    }
+    
+}
+@media screen and (max-width:1279px) {
+    .centerPage{
+        width: 85vw;
+        left: 7.5vw;
+    }
+    
+}
+@media screen and (max-width:900px) {
+    .centerPage{
+        width: 90vw;
+        left: 5vw;
+    }
+}
+@media screen and (max-width:640px){
+    .centerPage{
+        width: 100vw;
+        left: 0;
+    }    
+}
+
