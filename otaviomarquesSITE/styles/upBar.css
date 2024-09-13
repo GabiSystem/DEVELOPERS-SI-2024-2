@@ -3,6 +3,7 @@
 	width: 100vw;
 	height: 100px;
 	position: fixed;
+	z-index: 3;
 }
 
 .logoBar {
@@ -11,7 +12,10 @@
 	height: 90px;
 	margin-top: 5px;
 	margin-left: 80px;
+	z-index: 3;
 }
+
+
 @media screen and (max-width:639px){
 	.logoBar{
 		margin-left: 45px;
@@ -19,75 +23,107 @@
 }
 
 .btnBar{
-	position:fixed;
-	top: 4vh;
-	max-height: 50px;
-}
-@media screen and (min-width:1073px) {
-	.btnBar{
-		left: 60lvw;
-	}
-}
-@media screen and (max-width:1072px) {
-	.btnBar{
-		left: 50lvw;
-	}	
-}
-@media screen and (max-width:856px){
-	.btnBar{
-		left: 30lvw;
-	}	
+	list-style-type: none;
+	background-color: rgb(102, 144, 60);
 }
 
-.btnBarOpt{
-	height: 50px;
-	width: 100px;
-	background-color:whitesmoke;
-	border-style: hidden;
-	font-size: 15px;
+.btnBar li{
+	color: white;
 }
 
-.btnBarOpt:hover{
-	border-left-style: solid;
-	border-right-style: solid;
-	border-left-width: 2;
-	border-right-width: 2;
-	color:brown;
-}
-
-@media screen and (max-width:639px){
-	.btnBarOpt{
-		width: 80px;
-		font-size: 12px;
-	}
-}
-
-.btnServico{
-	position: relative;
-	display: inline-block;
-}
-
-.menuServico{
-	display: none;
-	position: absolute;
-	height: fit-content;
-	width: 90px;
-
-}
-.menuServico button{
+.btnBarBtn{
+	cursor: pointer;
 	color: black;
-	text-decoration: none;
-	background-color: white;
-	height: fit-content;
-	width: 90px;
-
-	border: 1;
-}
-.menuServico button:hover{
-	text-decoration: underline;
-
+	position: fixed;
+	top: 25px;
+	left: 80vw;
 }
 
-.btnServico:hover{
-	.menuServico{display: block;}
+@media screen and (min-width:678px) {
+	.btnBar{
+		padding: 0;
+		margin: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		top: 25px;
+		height: 50px;
+		position: fixed;
+		right: 10vw;
+	}
+	.btnBar li{
+		font-size: 20px;
+		display: flex;
+		justify-content: center;
+		justify-items: center;
+		line-height: 50px;
+		padding-left: 15px;
+		padding-right: 15px;
+		height: 50px;
+		max-height: 50px;
+	}
+	.btnBar li:hover{
+		background-color: darkolivegreen;
+	}
+	.btnBarBtn{
+		display: none;
+	}
+	.srvcMenu{
+		position: relative;
+		display: inline-block;
+	}
+	.srvcOpt{
+		display: none;
+		position: absolute;
+		flex-direction: column;
+		top: 50px;
+
+	}
+	.srvcOpt li{
+		background-color: rgb(102, 144, 60);
+		height: fit-content;
+		width: 100px;
+		padding:0px;
+		margin: 0px;
+	}
+	.srvcOpt li:hover{
+		border-style: solid;
+		border: 1;
+		border-color: rgb(70, 88, 39);
+		padding: 0;
+		margin: 0;
+	}
+	.srvcMenu:hover{
+		.srvcOpt{
+			display: block;
+		}
+	}	
+}
+
+@media screen and (max-width:677px) {
+	.btnBar{
+		display: none;
+		flex-direction: column;
+		justify-content: left;
+		width: 100vw;
+		height: 100vh;
+		font-size: 24px;
+		top: 0vh;
+	}
+	.btnBar li{
+		padding-top: 10px;
+		padding-bottom:10px ;
+	}
+	.btnBar.active{
+		display: flex;
+		z-index: 10;
+		position: fixed;
+	}
+	.btnBarBtn{
+		display: block;
+	}
+	.logoBar.ocult{
+		opacity: 0;
+		visibility: hidden;
+	}
 }

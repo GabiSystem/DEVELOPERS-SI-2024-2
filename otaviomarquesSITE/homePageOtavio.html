@@ -2,31 +2,38 @@
     <head>
         <title>Página Inicial | Otavio Marques Decorações</title>
         <meta name="viewport" content="width=device-width">
-        <script src="scrpts/servicoJS.js"></script>
         <link rel="Stylesheet" href="styles/upBar.css">
         <link rel="Stylesheet" href="styles/structure.css">
+        <script src="scripts/menuBtn.js"></script>
     </head>
     <body>
 		    <div class="upSideBar" style="z-index: 3;">
                 <div class="logoBar">
-                    <img src="imagens/logo2.png" height="90px" width="288px">
+                    <img src="imagens/logo3.png" height="90px">
                 </div>
-                <div class="btnBar">
-                    <a href="homePageOtavio.html"><button class="btnBarOpt">INICIO</button></a>
-                    <button class="btnBarOpt">HISTORIA</button>
-
-                    <div class="btnServico">
-                        <button class="btnBarOpt">SERVIÇOS</button>
-                            <div class="menuServico">
-                                <button>Aniversário</button>
-                                <button>Casamento</button>
-                                <button>Corporativo</button>
-                                <button>Outros</button>
-                        </div>
-                    </div>
-                    <button class="btnBarOpt">CONTATO</button>
+                <div class="btnBarBtn" onclick="tgleMenu()">
+                    <img src="imagens/menuButton.png" height="50px">
                 </div>
-                </div>
+                    <ul class="btnBar">
+                        <li>
+                          Início
+                        </li>
+                        <li>
+                            História
+                        </li>
+                        <li class="srvcMenu">
+                            Serviços
+                            <ul class="srvcOpt">
+                                <li>Casamento</li>
+                                <li>Corporativo</li>
+                                <li>Aniversario</li>
+                                <li>Outros</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Contato
+                        </li>
+                </ul>
             </div>
             <div>
                 <div class="centerPage" style="z-index: 2;">
