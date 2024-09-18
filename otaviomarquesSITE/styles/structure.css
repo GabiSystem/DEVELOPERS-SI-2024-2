@@ -6,8 +6,8 @@ body{
     background-color: white;
     border: 0;
     top: 100px;
-    position: fixed;
-    height: 100vh;
+    position: absolute;
+    height: 600px;
     word-wrap: break-word;
     white-space: normal;
 }
@@ -44,16 +44,5 @@ body{
         width: 100vw;
         left: 0;
     }    
-}
-.imgWpp{
-    height: 70px;
-    width: 70px;
-    z-index: 3;
-    position: fixed;
-    bottom: 15px;
-    right: 15px;
-}
-.imgWpp:hover{
-    transform: scale(1.2);
 }
 

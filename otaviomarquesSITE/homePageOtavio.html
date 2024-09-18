@@ -1,14 +1,18 @@
 <html>
+
     <head lang="pt-BR">
-	<meta charset="UTF-8"> 
+	    <meta charset="UTF-8"> 
         <title>Página Inicial | Otavio Marques Decorações</title>
         <meta name="viewport" content="width=device-width">
         <link rel="Stylesheet" href="styles/upBar.css">
+        <link rel="Stylesheet" href="styles/wppStyles.css">
         <link rel="Stylesheet" href="styles/structure.css">
         <script src="scripts/menuBtn.js"></script>
+
     </head>
+
     <body>
-		    <div class="upSideBar" style="z-index: 3;">
+		    <div class="upSideBar">
                 <div class="logoBar">
                     <img src="imagens/logo3.png" height="90px">
                 </div>
@@ -16,32 +20,31 @@
                     <img src="imagens/menuButton.png" height="50px">
                 </div>
                     <ul class="btnBar">
-                        <li>
-                          Início
+                        <li class="backBtn" onclick="tgleMenu()">
+                            ←
                         </li>
                         <li>
-                            História
+                          <a href="homePageOtavio.html">Início</a>
                         </li>
-                        <li class="srvcMenu">
+                        <li>
+                            <a href="">História</a>
+                        </li>
+                        <li class="srvcMenu" onclick="tgleServ()">
                             Serviços
                             <ul class="srvcOpt">
-                                <li>Casamento</li>
-                                <li>Corporativo</li>
-                                <li>Aniversario</li>
-                                <li>Outros</li>
+                                <li><a href="">Casamento</a></li>
+                                <li><a href="">Corporativo</a></li>
+                                <li><a href="">Aniversario</a></li>
+                                <li><a href="">Outros</a></li>
                             </ul>
                         </li>
                         <li>
-                            Contato
+                            <a href="">Contato</a>
                         </li>
                 </ul>
             </div>
             <div>
-                <div class="centerPage" style="z-index: 2;">
-                    
-                </div>
-                <div class="downBar" style="z-index: 3;"></div>
+                <a href="https://wa.me//5517988128494?text=Tenho%20interesse%20em%20estar%20fazendo%20um%20orçamento%20com%20você" ><img src="imagens/wpp.png" class="wppBtn"></a>
             </div>
-	    <a href="https://web.whatsapp.com/"><img src="./imagens/wpp.png" class="imgWpp" alt="Whatsapp"></a>
 	</body>
 </html>

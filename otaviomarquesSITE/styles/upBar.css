@@ -1,3 +1,4 @@
+/*aqui ficam todos os estilos da barra superior... deu trabalho fazer isso */
 .upSideBar {
 	background-color: whitesmoke;
 	width: 100vw;
@@ -15,7 +16,6 @@
 	z-index: 3;
 }
 
-
 @media screen and (max-width:639px){
 	.logoBar{
 		margin-left: 45px;
@@ -26,8 +26,12 @@
 	list-style-type: none;
 	background-color: rgb(102, 144, 60);
 }
-
 .btnBar li{
+	color: white;
+	cursor: pointer;
+}
+.btnBar a{
+	text-decoration: none;
 	color: white;
 }
 
@@ -51,6 +55,8 @@
 		position: fixed;
 		right: 10vw;
 	}
+
+	/* opções da barra horizontal da pagina em pc e monitores grantes */
 	.btnBar li{
 		font-size: 20px;
 		display: flex;
@@ -60,14 +66,16 @@
 		padding-left: 15px;
 		padding-right: 15px;
 		height: 50px;
-		max-height: 50px;
+		flex-direction: row;
+	}
+	.btnBar li.backBtn{
+		display: none;
 	}
 	.btnBar li:hover{
 		background-color: darkolivegreen;
 	}
-	.btnBarBtn{
-		display: none;
-	}
+
+	/* estilizações da lista de opções dentro na categoria serviços */
 	.srvcMenu{
 		position: relative;
 		display: inline-block;
@@ -76,52 +84,79 @@
 		display: none;
 		position: absolute;
 		flex-direction: column;
-		top: 50px;
+		top: 100%;
+		left: 0;
+		margin: 0;
+		padding: 0;
 
 	}
 	.srvcOpt li{
 		background-color: rgb(102, 144, 60);
 		height: fit-content;
 		width: 100px;
+		max-width: 100px;
 		padding:0px;
 		margin: 0px;
 	}
 	.srvcOpt li:hover{
-		border-style: solid;
-		border: 1;
-		border-color: rgb(70, 88, 39);
 		padding: 0;
 		margin: 0;
 	}
 	.srvcMenu:hover{
 		.srvcOpt{
-			display: block;
+			display: inline-block;
 		}
-	}	
+	}
+
+	/* isso faz o botão para dispositivos moveis ficar 
+	invisivel caso o site esteja em uma abertura grande */
+	.btnBarBtn{
+		display: none;
+	}
 }
 
 @media screen and (max-width:677px) {
+
+	/* todas opções no menu vertical quando em dispositivo movel ou
+	monitores pequenos */
 	.btnBar{
+		position: fixed;
+		top: 0px;
+		margin: 0px;
+		padding: 0px;
 		display: none;
 		flex-direction: column;
 		justify-content: left;
-		width: 100vw;
+		width: 50vw;
 		height: 100vh;
 		font-size: 24px;
-		top: 0vh;
 	}
 	.btnBar li{
-		padding-top: 10px;
-		padding-bottom:10px ;
+		line-height: 40px;
+	}
+	.btnBar li:hover{
+		background-color: darkolivegreen;
+
 	}
 	.btnBar.active{
 		display: flex;
-		z-index: 10;
 		position: fixed;
+		z-index: 5;
 	}
+
+	.srvcOpt{
+		display: none;
+		list-style-type: none;
+		position: relative;
+	}
+	.srvcOpt.display{
+		display: block;
+	}
+
 	.btnBarBtn{
 		display: block;
 	}
+
 	.logoBar.ocult{
 		opacity: 0;
 		visibility: hidden;

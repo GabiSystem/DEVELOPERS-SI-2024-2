@@ -7,3 +7,9 @@ function tgleMenu() {
 
     
 }
+
+function tgleServ() {
+    const servOpt = document.querySelector('.srvcOpt');
+
+    servOpt.classList.toggle('display');
+}
