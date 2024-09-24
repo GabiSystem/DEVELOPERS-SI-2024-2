@@ -1,0 +1,80 @@
+/* cores, tamanhos e imagens não são definitivas e podem ser alteradas */
+.historiaRoot{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    background-color: aliceblue;
+}
+.txtSide{ /*lado texto*/
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 49.9%;
+}
+#htxt{
+    margin-top: 1.5em;
+    text-wrap: pretty;
+    text-decoration: none;
+    font-weight: normal;
+    font-size:1.1em ;
+    width: 80%;
+    height: auto;
+    max-height: 90%;
+    
+}
+#hautor{
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+    font-size: 2em;
+}
+#hr{ /*barra vertical que divide o texto e a imagem*/
+    margin-top: 1.2em;
+    height: 50%;
+    width: 0.2%;
+    background-color: black;
+} 
+.imgSide{ /*lado imagem*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 49.9%;
+}
+.imgCenter{
+    width: 90%;
+    height: 100%;
+}
+.imgSide h1{
+    margin-left: 0.5em;
+    height: 1em;
+    font-size: 2.1em;
+    top: 1px;
+}
+.imgContainer{
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imgSide img{
+    max-width: 90%;
+}
+@media screen and (max-width: 900px) {
+    .historiaRoot {
+        flex-direction: column; 
+    }
+    #hr{
+        display: none;
+    }
+    .imgSide h1{
+        display: none;
+    }
+    .txtSide, .imgSide {
+        width: 100%; 
+        bottom: 10px; 
+    }
+}
