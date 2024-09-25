@@ -1,0 +1,124 @@
+.footerClass{
+    background-color: rgb(44, 44, 44);
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    bottom: 0;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.footerGlobal{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+
+/* todo css da missão*/
+.footerMission{
+    max-width: 275px;
+    min-width: 275px;
+    height: 200px;
+    padding: 0px;
+    position: relative;
+    margin-right: 40px;
+}
+.footerMission img{
+    max-width: 100px;
+    position: relative;
+    left: 87.5px;
+    display: block;
+}
+.footerMission-Text{
+    padding-top: 10px;
+    color: white;
+    font-family: georgia, serif;
+    font-size: small;
+    font-style: normal;
+    letter-spacing: 1.3px;
+    text-align: center;
+}
+
+/*todo css da parte empresaria */
+.footerEnterprise{
+    max-width: 160px;
+    min-width: 160px;
+    height: 200px;
+    margin-right: 40px;
+}
+.footerEnterprise-Text{
+    color: white;
+    font-size: 20px;
+    font-family: 'Arial';
+}
+.footerEnterprise ul{
+    list-style-type: none;
+    flex-direction: column;
+    left: 0;
+    margin-left: 0;
+    padding-left: 0;
+}
+.footerEnterprise li{
+    color: white;
+    font-size: 17px;
+    font-family: Georgia, serif;
+    margin-top: 10px;
+}
+.footerEnterprise li i::before{
+    content: '\00BB';
+}
+.footerEnterprise li a{
+    text-decoration: none;
+    color: white;
+    position: relative;
+    margin-left: 7px;
+    transition: 0.4s;
+}
+.footerEnterprise li a:hover{
+    margin-left: 14px;
+}
+
+/* todo css da parte contato endereço */
+.footerContact{
+    max-width: 275px;
+    min-width: 275px;
+    height: 200px;
+}
+.footerContact-Text{
+    color: white;
+    font-size: 20px;
+    font-family: 'Arial';
+}
+.footerContact ul{
+    list-style-type: none;
+    flex-direction: column;
+    left: 0;
+    margin-left: 0;
+    padding-left:0;
+}
+
+.footerContact li{
+    color: rgb(221, 221, 221);
+    font-size: 15px;
+    margin-top: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    align-items: center;
+}
+.footerContact li a{
+    text-decoration: none;
+    position: relative;
+    margin-left: 7px;
+    transition: 0.4s;
+    color: white;
+}
+.footerContact li a:hover{
+    margin-left: 12px;
+}
+.footerContact li i img{
+    max-width: 17px;
+}
