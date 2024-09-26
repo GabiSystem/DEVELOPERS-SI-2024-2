@@ -1,5 +1,5 @@
 #PROJETO: DEVELOPERS-SI-2024-2
-#INTEGRANTES: GabiSystem, v1NNyOnlyY, muriloHx, PolizeliDev
+#INTEGRANTES: GabiSystem, v1NNyOnlyY, muriloHx, PolizeliDev, Luciano Bampa
 
 - Esse repositorio é referente a criação e desenvolvimento de um site sem fins lucrativos,
 com finalidade de estudo e desenvolvimento da capacidade dos integrantes em desenvolvimento
