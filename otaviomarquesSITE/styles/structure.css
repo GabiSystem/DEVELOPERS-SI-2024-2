@@ -3,13 +3,13 @@
 .centerPage{
     background-color: whitesmoke;
     border: 0;
-    top: 100px;
+    padding-top: 100px;
     position: relative;
     word-wrap: break-word;
     white-space: normal;
-    display: block;
+    display: inline-block;
     overflow: visible;
-    height: 80vh;
+    min-height: 120vh;
 }
 
 @media screen and (min-width:1900px) and (min-height:800px) {

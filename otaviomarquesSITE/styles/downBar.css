@@ -1,21 +1,20 @@
 .footerClass{
-    background-color: rgb(44, 44, 44);
-    width: 100%;
-    height: fit-content;
     position: relative;
-    bottom: 0px;
-    white-space: normal;
-    word-wrap: break-word;
 }
 
 .footerGlobal{
+    background-color: rgb(44, 44, 44);
     display: flex;
-    position: relative;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     padding-top: 60px;
     padding-bottom: 20px;
+    width: 100%;
+    height: fit-content;
+    bottom: 0px;
+    white-space: normal;
+    word-wrap: break-word;  
 }
 
 /* todo css da missão*/
