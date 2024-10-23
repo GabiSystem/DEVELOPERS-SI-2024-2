@@ -43,25 +43,15 @@
     height: 100%;
     width: 49.9%;
 }
-.imgCenter{
-    width: 90%;
-    height: 100%;
+.imgSide img{
+    width: 70%;
 }
+
 .imgSide h1{
     margin-left: 0.5em;
     height: 1em;
     font-size: 2.1em;
     top: 1px;
-}
-.imgContainer{
-    height: auto;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.imgSide img{
-    max-width: 90%;
 }
 @media screen and (max-width: 900px) {
     .historiaRoot {

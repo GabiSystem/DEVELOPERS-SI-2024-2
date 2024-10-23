@@ -5,11 +5,18 @@
     border: 0;
     top: 100px;
     position: relative;
-    min-height: 650px;
     word-wrap: break-word;
     white-space: normal;
+    display: block;
+    overflow: visible;
+    height: 80vh;
 }
 
+@media screen and (min-width:1900px) and (min-height:800px) {
+    .centerPage{
+        height: fit-content;
+    }
+}
 @media screen and (min-width:1280px) {
         .centerPage{
         width: 75vw;
@@ -17,16 +24,15 @@
     }
 }
 
-@media screen and (max-width:900px) {
+@media screen and (min-width:641px) {
     .centerPage{
-        width: 90vw;
-        left: 5vw;
+        width: 80vw;
+        left: 10vw;
     }
 }
 
 @media screen and (max-width:640px){
     .centerPage{
-        width: 100%;
-        left: 0;
+        width: 100vw;
     }    
 }

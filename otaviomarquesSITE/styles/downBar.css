@@ -3,7 +3,7 @@
     width: 100%;
     height: fit-content;
     position: relative;
-    bottom: 0;
+    bottom: 0px;
     white-space: normal;
     word-wrap: break-word;
 }
