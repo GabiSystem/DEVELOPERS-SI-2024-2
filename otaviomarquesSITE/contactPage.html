@@ -15,6 +15,8 @@
         <link rel="Stylesheet" href="styles/downBar.css">
         <link rel="Stylesheet" href="styles/contact.css">
 
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
         <script src="scripts/menuBtn.js"></script>
         <script src="scripts/contact.js"></script>
     </head>
@@ -86,10 +88,10 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Por onde prefere receber o orçamento:
+                                    <td>Por onde prefere <br> receber o orçamento:
                                     </td>
                                     <td>
-                                        <select>
+                                        <select id="zaporemail">
                                             <option value="zapCell">Whats App</option>
                                             <option value="orcEmail">Email</option>
                                         </select>
@@ -123,9 +125,23 @@
                                         <span class="text">Campo obrigatório</span>
                                     </div></td>
                                     <td>
+                                        <select id="tipFest">
+                                            <option id="debut15">15 ANOS</option>
+                                            <option id="aniver">ANIVERSÁRIO</option>
+                                            <option id="bodas">BODAS</option>
+                                            <option id="csmnt">CASAMENTO</option>
+                                            <option id="confer">CONFERÊNCIA</option>
+                                            <option id="corporative">CORPORATIVO</option>
+                                            <option id="festaGala">FESTA DE GALA</option>
+                                            <option id="formatura">FORMATURA</option>
+                                            <option id="another">OUTRO</option>
+                                        </select>
                                     </td>
                                 </tr>
                             </table>
+                            <textarea id="orcText" style="width:200px; height:40px; resize: none;" placeholder="Nesse evento eu gostaria que tivesse..."></textarea>
+                            <br>
+                            <button type="submit" class="submitButton">Solicitar</button>
                         </form>
                     </div>
                 </div>
