@@ -1,5 +1,14 @@
+fetch('./api/my-api.js')
+    .then(response => response.json())
+    .then(data => {
+            const apiKey1 = data.apiID;
+            const apiKey2 = data.processID;
+            const apiKey3 = data.templateID;
+    })
+    .catch(error => console.error('Erro ao acessar as API keys:', error));
+
 (function() {
-    emailjs.init(process.env.NEXT_PUBLIC_PUBLIC_KEY);
+    emailjs.init(apiKey1);
 })();
 emailjs.debug = true;
 
@@ -68,7 +77,7 @@ function enviarFormulario(nomeComp, preferenciaOrcamento, email, telefone, tipoE
         data_evento: dataEvento
     };
 
-    emailjs.send(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, templateParams)
+    emailjs.send(apiKey2, apiKey3, templateParams)
         .then(function(response) {
             alert("Formulário enviado com sucesso!");
             console.log("SUCCESS!", response.status, response.text);
