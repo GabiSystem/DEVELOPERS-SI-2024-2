@@ -38,13 +38,21 @@ function verifCamps(event) {
     let email = document.getElementById('emailCli').value.trim();
     let telefone = document.getElementById('tellWhats').value.trim();
     let tipoEvento = document.getElementById('tipFest').value;
+    let tipoEvento2 = document.getElementById('outroFesta').value;
     let dataEvento = document.getElementById('dataevento').value;
 
-    if (nomeComp === "" || tipoEvento === "" || dataEvento === "") {
+    if (nomeComp === "" || dataEvento === "") {
         alert("Por favor, preencha todos os campos obrigatórios.");
         return;
     }
-
+    if ( tipoEvento === "OUTRO" && tipoEvento2 === ""){
+        alert("Por favor, preencha o tipo de evento.");
+        return;
+    }
+    if (preferenciaOrcamento === '') {
+        alert("Por favor, insira por onde deseja receber o orçamento.");
+        return;
+    }
     if (preferenciaOrcamento === 'orcEmail' && email === "") {
         alert("Por favor, preencha o campo de email.");
         return;
@@ -55,58 +63,29 @@ function verifCamps(event) {
         return;
     }
 
-    function enviarFormulario(nomeComp, preferenciaOrcamento, email, telefone, tipoEvento, dataEvento) {
-    let templateParams = {
-        nome: nomeComp,
-        orcamento_preferencia: preferenciaOrcamento === 'orcEmail' ? 'Email' : 'WhatsApp',
-        email_cliente: email,
-        telefone_cliente: telefone,
-        tipo_evento: tipoEvento,
-        data_evento: dataEvento
+enviarFormulario();
+}
+
+
+    function enviarFormulario() {
+    const formData12 = {
+        nome: document.getElementById('nomeComp').value,
+        orc_pref: document.getElementById('zaporemail').value,
+        email_cliente: document.getElementById('emailCli').value,
+        telefone_cliente: document.getElementById('tellWhats').value,
+        tipo_evento: document.getElementById('tipFest').value,
+        tipo_evento2: document.getElementById('outroFesta').value,
+        data_evento: document.getElementById('dataevento').value,
+        descri_evento: document.getElementById('orcText').value,
+        local_evento: document.getElementById('enderecoLocal').value
     };
 
-    emailjs.send("service_0wpyaik", "template_l99zukg", templateParams)
+    emailjs.send("service_0wpyaik", "template_l99zukg", formData12)
         .then(function(response) {
             alert("Formulário enviado com sucesso!");
             console.log("SUCCESS!", response.status, response.text);
-            limparInputs();
+            console.log(formData12);
         }, function(error) {
             alert("Ocorreu um erro ao enviar o formulário. Tente novamente.");
             console.log("FAILED...", error);
         });
-
-enviarFormulario();
-}
-}
-
-
-
-function limparInputs() {
-    // Seleciona todos os elementos de input e textarea
-    const inputs = document.querySelectorAll('input, textarea, select');
-    
-    inputs.forEach(input => {
-        // Verifica o tipo de input para limpar corretamente
-        switch (input.type) {
-            case 'text':
-            case 'password':
-            case 'textarea':
-            case 'email':
-            case 'number':
-            case 'search':
-            case 'tel':
-            case 'url':
-            case 'date':
-                input.value = '';
-                break;
-            case 'checkbox':
-            case 'radio':
-                input.checked = false;
-                break;
-            case 'select-one':
-            case 'select-multiple':
-                input.selectedIndex = -1;
-                break;
-        }
-    });
-}
