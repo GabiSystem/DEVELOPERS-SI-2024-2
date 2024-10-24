@@ -1,5 +1,5 @@
 (function() {
-    emailjs.init(import.process.env.PUBLIC_KEY);
+    emailjs.init(process.env.NEXT_PUBLIC_PUBLIC_KEY);
 })();
 emailjs.debug = true;
 
@@ -68,7 +68,7 @@ function enviarFormulario(nomeComp, preferenciaOrcamento, email, telefone, tipoE
         data_evento: dataEvento
     };
 
-    emailjs.send(import.process.env.SERVICE_ID, import.process.env.TEMPLATE_ID, templateParams)
+    emailjs.send(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, templateParams)
         .then(function(response) {
             alert("Formulário enviado com sucesso!");
             console.log("SUCCESS!", response.status, response.text);
