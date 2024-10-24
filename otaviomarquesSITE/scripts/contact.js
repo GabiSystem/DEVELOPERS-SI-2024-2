@@ -1,14 +1,5 @@
-fetch('./api/my-api.js')
-    .then(response => response.json())
-    .then(data => {
-            const apiKey1 = data.apiID;
-            const apiKey2 = data.processID;
-            const apiKey3 = data.templateID;
-    })
-    .catch(error => console.error('Erro ao acessar as API keys:', error));
-
 (function() {
-    emailjs.init(apiKey1);
+    emailjs.init("_8jL2DYfQ75ArdviL");
 })();
 emailjs.debug = true;
 
@@ -64,10 +55,7 @@ function verifCamps(event) {
         return;
     }
 
-    enviarFormulario();
-}
-
-function enviarFormulario(nomeComp, preferenciaOrcamento, email, telefone, tipoEvento, dataEvento) {
+    function enviarFormulario(nomeComp, preferenciaOrcamento, email, telefone, tipoEvento, dataEvento) {
     let templateParams = {
         nome: nomeComp,
         orcamento_preferencia: preferenciaOrcamento === 'orcEmail' ? 'Email' : 'WhatsApp',
@@ -77,12 +65,48 @@ function enviarFormulario(nomeComp, preferenciaOrcamento, email, telefone, tipoE
         data_evento: dataEvento
     };
 
-    emailjs.send(apiKey2, apiKey3, templateParams)
+    emailjs.send("service_0wpyaik", "template_l99zukg", templateParams)
         .then(function(response) {
             alert("Formulário enviado com sucesso!");
             console.log("SUCCESS!", response.status, response.text);
+            limparInputs();
         }, function(error) {
             alert("Ocorreu um erro ao enviar o formulário. Tente novamente.");
             console.log("FAILED...", error);
         });
+
+enviarFormulario();
+}
+}
+
+
+
+function limparInputs() {
+    // Seleciona todos os elementos de input e textarea
+    const inputs = document.querySelectorAll('input, textarea, select');
+    
+    inputs.forEach(input => {
+        // Verifica o tipo de input para limpar corretamente
+        switch (input.type) {
+            case 'text':
+            case 'password':
+            case 'textarea':
+            case 'email':
+            case 'number':
+            case 'search':
+            case 'tel':
+            case 'url':
+            case 'date':
+                input.value = '';
+                break;
+            case 'checkbox':
+            case 'radio':
+                input.checked = false;
+                break;
+            case 'select-one':
+            case 'select-multiple':
+                input.selectedIndex = -1;
+                break;
+        }
+    });
 }

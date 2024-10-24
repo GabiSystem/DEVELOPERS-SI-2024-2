@@ -163,6 +163,11 @@
                                     </td>
                                     <td>
                                         <input type="date" id="dataevento" name="dataevent">
+                                        <script>
+                                            document.getElementById('dataevento').addEventListener('keydown', function(e) {
+                                                e.preventDefault();
+                                            });
+                                        </script>
                                     </td>
                                 </tr>
                                 <tr>
