@@ -9,8 +9,10 @@ function toggleTipOutro() {
 
     if (select.value === 'another') {
         outroFesta.style.display = 'table-row';
+        outroTip.style.display = 'block';
     } else {
         outroFesta.style.display = 'none';
+        outroTip.style.display = 'none';
     }
 }
 
