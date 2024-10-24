@@ -1,0 +1,11 @@
+.wppBtn{
+    height: 70px;
+    width: 70px;
+    z-index: 5;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+.wppBtn:hover{
+    transform: scale(1.1);
+}

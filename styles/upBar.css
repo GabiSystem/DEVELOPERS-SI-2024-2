@@ -1,0 +1,167 @@
+/*aqui ficam todos os estilos da barra superior... deu trabalho fazer isso */
+.upSideBar {
+	background-color: rgb(236, 236, 236);
+	width: 100vw;
+	height: 100px;
+	position: fixed;
+	z-index: 3;
+}
+
+.logoBar {
+	position: fixed;
+	width: 90px;
+	height: 90px;
+	margin-top: 5px;
+	margin-left: 80px;
+	z-index: 3;
+}
+.logoBar img:hover{
+	transform: scale(1.05);
+}
+
+@media screen and (max-width:639px){
+	.logoBar{
+		margin-left: 45px;
+	}
+}
+
+.btnBar{
+	list-style-type: none;
+	background-color: rgb(102, 144, 60);
+}
+.btnBar li{
+	color: white;
+	cursor: pointer;
+}
+.btnBar a{
+	text-decoration: none;
+	color: white;
+}
+
+.btnBarBtn{
+	cursor: pointer;
+	color: black;
+	position: fixed;
+	top: 25px;
+	left: 80vw;
+}
+
+@media screen and (min-width:678px) {
+	.btnBar{
+		padding: 0;
+		margin: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		top: 25px;
+		height: 50px;
+		position: fixed;
+		right: 10vw;
+	}
+
+	/* opções da barra horizontal da pagina em pc e monitores grantes */
+	.btnBar li{
+		font-size: 20px;
+		display: flex;
+		justify-content: center;
+		justify-items: center;
+		line-height: 50px;
+		padding-left: 15px;
+		padding-right: 15px;
+		height: 50px;
+		flex-direction: row;
+	}
+	.btnBar li.backBtn{
+		display: none;
+	}
+	.btnBar li:hover{
+		background-color: darkolivegreen;
+	}
+
+	/* estilizações da lista de opções dentro na categoria serviços */
+	.srvcMenu{
+		position: relative;
+		display: inline-block;
+	}
+	.srvcOpt{
+		display: none;
+		position: absolute;
+		flex-direction: column;
+		top: 100%;
+		left: 0;
+		margin: 0;
+		padding: 0;
+
+	}
+	.srvcOpt li{
+		background-color: rgb(102, 144, 60);
+		height: fit-content;
+		width: 100px;
+		max-width: 100px;
+		padding:0px;
+		margin: 0px;
+	}
+	.srvcOpt li:hover{
+		padding: 0;
+		margin: 0;
+	}
+	.srvcMenu:hover{
+		.srvcOpt{
+			display: inline-block;
+		}
+	}
+
+	/* isso faz o botão para dispositivos moveis ficar 
+	invisivel caso o site esteja em uma abertura grande */
+	.btnBarBtn{
+		display: none;
+	}
+}
+
+@media screen and (max-width:677px) {
+
+	/* todas opções no menu vertical quando em dispositivo movel ou
+	monitores pequenos */
+	.btnBar{
+		position: fixed;
+		top: 0px;
+		margin: 0px;
+		padding: 0px;
+		display: none;
+		flex-direction: column;
+		justify-content: left;
+		width: 100vw;
+		min-height: fit-content;
+		height: 400px;
+		font-size: 24px;
+	}
+	.btnBar li{
+		line-height: 40px;
+	}
+	.btnBar li:hover{
+		background-color: darkolivegreen;
+
+	}
+	.btnBar.active{
+		display: flex;
+		position: fixed;
+		z-index: 5;
+	}
+	
+	.srvcOpt{
+		display: none;
+		list-style-type: none;
+		position: relative;
+	}
+	.srvcOpt.display{
+		display: block;
+	}
+	.btnBarBtn{
+		display: block;
+	}
+
+	.logoBar.ocult{
+		opacity: 0;
+		visibility: hidden;
+	}
+}
