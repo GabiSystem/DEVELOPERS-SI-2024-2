@@ -1,5 +1,8 @@
+templateID=meta.env.emailJS_TEMPLATE_ID;
+serviceID=emailJS_SERVICE_ID;
+
 (function() {
-    emailjs.init(import.meta.env.emailJS_PUBLIC_KEY);
+    emailjs.init(process.env.PUBLIC_KEY);
 })();
 emailjs.debug = true;
 
@@ -68,7 +71,7 @@ function enviarFormulario(nomeComp, preferenciaOrcamento, email, telefone, tipoE
         data_evento: dataEvento
     };
 
-    emailjs.send(import.meta.env.emailJS_SERVICE_ID, import.meta.env.emailJS_TEMPLATE_ID, templateParams)
+    emailjs.send(process.env.SERVICE_ID, process.env.TEMPLATE_ID, templateParams)
         .then(function(response) {
             alert("Formulário enviado com sucesso!");
             console.log("SUCCESS!", response.status, response.text);
