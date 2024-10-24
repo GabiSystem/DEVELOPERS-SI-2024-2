@@ -16,6 +16,8 @@
         <link rel="Stylesheet" href="styles/contact.css">
 
         <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
 
         <script src="scripts/menuBtn.js"></script>
         <script src="scripts/contact.js"></script>
@@ -89,9 +91,13 @@
                                 </tr>
                                 <tr>
                                     <td>Por onde prefere <br> receber o orçamento:
+                                        <div class="obrig">*
+                                            <span class="text">Campo obrigatório</span>
+                                        </div>
                                     </td>
                                     <td>
-                                        <select id="zaporemail">
+                                        <select id="zaporemail" onchange="preferido()">
+                                            <option value="">Selecione...</option>
                                             <option value="zapCell">Whats App</option>
                                             <option value="orcEmail">Email</option>
                                         </select>
@@ -128,24 +134,48 @@
                                         <span class="text">Campo obrigatório</span>
                                     </div></td>
                                     <td>
-                                        <select id="tipFest">
-                                            <option id="debut15">15 ANOS</option>
-                                            <option id="aniver">ANIVERSÁRIO</option>
-                                            <option id="bodas">BODAS</option>
-                                            <option id="csmnt">CASAMENTO</option>
-                                            <option id="confer">CONFERÊNCIA</option>
-                                            <option id="corporative">CORPORATIVO</option>
-                                            <option id="festaGala">FESTA DE GALA</option>
-                                            <option id="formatura">FORMATURA</option>
-                                            <option id="another">OUTRO</option>
+                                        <select id="tipFest" onchange="toggleTipOutro()">
+                                            <option id="000" value="">Selecione...</option>
+                                            <option id="debut15" value="debut15">15 ANOS</option>
+                                            <option id="aniver" value="aniver">ANIVERSÁRIO</option>
+                                            <option id="bodas" value="bodas">BODAS</option>
+                                            <option id="csmnt" value="csmnt">CASAMENTO</option>
+                                            <option id="confer" value="confer">CONFERÊNCIA</option>
+                                            <option id="corporative" value="corporative">CORPORATIVO</option>
+                                            <option id="festaGala" value="festaGala">FESTA DE GALA</option>
+                                            <option id="formatura" value="formatura">FORMATURA</option>
+                                            <option id="another" value="another">OUTRO</option>
                                         </select>
+                                    </td>
+                                </tr>
+                                <tr id="outroFesta" style="display: none;">
+                                    <td>
+                                        Qual seria o evento:
+                                    </td>
+                                    <td>
+                                        <input type="text" id="outroTip" name="tipOutro" maxlength="255" style="display: none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Data do evento:<div class="obrig">*
+                                            <span class="text">Campo obrigatório</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <input type="date" id="dataevento" name="dataevent">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Local do evento:</td>
+                                    <td>
+                                        <input type="text" id="enderecoLocal" name="endereco" maxlength="255" placeholder="Rua, Número, Bairro">
                                     </td>
                                 </tr>
                             </table>
                                 <br>Descreva um resumo de como gostaria do evento:<br>
                                 <textarea id="orcText" style="width:400px; height:110px; resize: none;" placeholder="Nesse evento eu gostaria que tivesse..."></textarea>
                                 <br><br>
-                                <button type="submit" class="submitButton">Solicitar</button>
+                                <button class="submitButton" onclick="verifCamps(event)">Solicitar</button>
                         </form>
                     </div>
                 </div>
