@@ -91,3 +91,4 @@ enviarFormulario();
             alert("Ocorreu um erro ao enviar o formulário. Tente novamente.");
             console.log("FAILED...", error);
         });
+    }
