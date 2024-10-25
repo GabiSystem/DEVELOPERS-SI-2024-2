@@ -76,7 +76,7 @@
                 <div class="contactPg">
                     <div class="formOrc">
                         <font size="6px" color="black">Formulario para orçamento</font>
-                        <form name="formdata" class="formula1">
+                        <form name="formdata" class="formula1" onsubmit="verifCamps(event)">
                             <table>
                                 <tr>
                                     <td>Nome: 
@@ -179,7 +179,7 @@
                                 <br>Descreva um resumo de como gostaria do evento:<br>
                                 <textarea id="orcText" style="width:400px; height:110px; resize: none;" placeholder="Nesse evento eu gostaria que tivesse..."></textarea>
                                 <br><br>
-                                <button type="submit" class="submitButton">Solicitar</button>
+                                <button type="submit" class="submitButton" on>Solicitar</button>
                         </form>
                     </div>
                 </div>
