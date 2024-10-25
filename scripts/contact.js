@@ -71,15 +71,15 @@ enviarFormulario();
 
     function enviarFormulario() {
     const formData12 = {
-        nome: document.getElementById('nomeComp').value,
-        orc_pref: document.getElementById('zaporemail').value,
-        email_cliente: document.getElementById('emailCli').value,
-        telefone_cliente: document.getElementById('tellWhats').value,
-        tipo_evento: document.getElementById('tipFest').value,
-        tipo_evento2: document.getElementById('outroFesta').value,
-        data_evento: document.getElementById('dataevento').value,
-        descri_evento: document.getElementById('orcText').value,
-        local_evento: document.getElementById('enderecoLocal').value
+        nome: document.getElementById('nomeComp').value.toString(),
+        orc_pref: document.getElementById('zaporemail').value.toString(),
+        email_cliente: document.getElementById('emailCli').value.toString(),
+        telefone_cliente: document.getElementById('tellWhats').value.toString(),
+        tipo_evento: document.getElementById('tipFest').value.toString(),
+        tipo_evento2: document.getElementById('outroFesta').value.toString(),
+        data_evento: document.getElementById('dataevento').value.toString(),
+        descri_evento: document.getElementById('orcText').value.toString(),
+        local_evento: document.getElementById('enderecoLocal').value.toString()
     };
 
     emailjs.send("service_0wpyaik", "template_l99zukg", formData12)
