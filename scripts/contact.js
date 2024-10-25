@@ -75,8 +75,9 @@ enviarFormulario();
         orc_pref: document.getElementById('zaporemail').value.toString(),
         email_cliente: document.getElementById('emailCli').value.toString(),
         telefone_cliente: document.getElementById('tellWhats').value.toString(),
+        participantes: document.getElementById('participants').value.toString(),   //sim esse id é uma piada com calças... lide com isso
         tipo_evento: document.getElementById('tipFest').value.toString(),
-        tipo_evento2: document.getElementById('outroFesta').value.toString(),
+        tipo_evento2: document.getElementById('outroFesta').value,
         data_evento: document.getElementById('dataevento').value.toString(),
         descri_evento: document.getElementById('orcText').value.toString(),
         local_evento: document.getElementById('enderecoLocal').value.toString()
