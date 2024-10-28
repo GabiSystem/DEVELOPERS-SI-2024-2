@@ -83,7 +83,7 @@ enviarFormulario();
         local_evento: document.getElementById('enderecoLocal').value.toString()
     };
 
-    emailjs.send("service_0wpyaik", "template_l99zukg", formData12)
+    emailjs.send("service_0wpyaik", "template_c40no6o", formData12)
         .then(function(response) {
             alert("Formulário enviado com sucesso!");
             console.log("SUCCESS!", response.status, response.text);
