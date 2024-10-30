@@ -9,14 +9,8 @@
     white-space: normal;
     display: inline-block;
     overflow: visible;
-    min-height: 120vh;
 }
 
-@media screen and (min-width:1900px) and (min-height:800px) {
-    .centerPage{
-        height: fit-content;
-    }
-}
 @media screen and (min-width:1280px) {
         .centerPage{
         width: 75vw;
