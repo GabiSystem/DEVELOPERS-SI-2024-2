@@ -15,30 +15,33 @@
 	margin-left: 80px;
 	z-index: 3;
 }
-.logoBar img:hover{
+
+.logoBar img:hover {
 	transform: scale(1.05);
 }
 
-@media screen and (max-width:639px){
-	.logoBar{
+@media screen and (max-width:639px) {
+	.logoBar {
 		margin-left: 45px;
 	}
 }
 
-.btnBar{
+.btnBar {
 	list-style-type: none;
 	background-color: rgb(102, 144, 60);
 }
-.btnBar li{
+
+.btnBar li {
 	color: white;
 	cursor: pointer;
 }
-.btnBar a{
+
+.btnBar a {
 	text-decoration: none;
 	color: white;
 }
 
-.btnBarBtn{
+.btnBarBtn {
 	cursor: pointer;
 	color: black;
 	position: fixed;
@@ -47,7 +50,7 @@
 }
 
 @media screen and (min-width:678px) {
-	.btnBar{
+	.btnBar {
 		padding: 0;
 		margin: 0;
 		display: flex;
@@ -60,7 +63,7 @@
 	}
 
 	/* opções da barra horizontal da pagina em pc e monitores grantes */
-	.btnBar li{
+	.btnBar li {
 		font-size: 20px;
 		display: flex;
 		justify-content: center;
@@ -71,19 +74,22 @@
 		height: 50px;
 		flex-direction: row;
 	}
-	.btnBar li.backBtn{
+
+	.btnBar li.backBtn {
 		display: none;
 	}
-	.btnBar li:hover{
+
+	.btnBar li:hover {
 		background-color: darkolivegreen;
 	}
 
 	/* estilizações da lista de opções dentro na categoria serviços */
-	.srvcMenu{
+	.srvcMenu {
 		position: relative;
 		display: inline-block;
 	}
-	.srvcOpt{
+
+	.srvcOpt {
 		display: none;
 		position: absolute;
 		flex-direction: column;
@@ -93,27 +99,30 @@
 		padding: 0;
 
 	}
-	.srvcOpt li{
+
+	.srvcOpt li {
 		background-color: rgb(102, 144, 60);
 		height: fit-content;
 		width: 100px;
 		max-width: 100px;
-		padding:0px;
+		padding: 0px;
 		margin: 0px;
 	}
-	.srvcOpt li:hover{
+
+	.srvcOpt li:hover {
 		padding: 0;
 		margin: 0;
 	}
-	.srvcMenu:hover{
-		.srvcOpt{
+
+	.srvcMenu:hover {
+		.srvcOpt {
 			display: inline-block;
 		}
 	}
 
 	/* isso faz o botão para dispositivos moveis ficar 
 	invisivel caso o site esteja em uma abertura grande */
-	.btnBarBtn{
+	.btnBarBtn {
 		display: none;
 	}
 }
@@ -122,7 +131,7 @@
 
 	/* todas opções no menu vertical quando em dispositivo movel ou
 	monitores pequenos */
-	.btnBar{
+	.btnBar {
 		position: fixed;
 		top: 0px;
 		margin: 0px;
@@ -135,32 +144,37 @@
 		height: 400px;
 		font-size: 24px;
 	}
-	.btnBar li{
+
+	.btnBar li {
 		line-height: 40px;
 	}
-	.btnBar li:hover{
+
+	.btnBar li:hover {
 		background-color: darkolivegreen;
 
 	}
-	.btnBar.active{
+
+	.btnBar.active {
 		display: flex;
 		position: fixed;
 		z-index: 5;
 	}
-	
-	.srvcOpt{
+
+	.srvcOpt {
 		display: none;
 		list-style-type: none;
 		position: relative;
 	}
-	.srvcOpt.display{
-		display: block;
-	}
-	.btnBarBtn{
+
+	.srvcOpt.display {
 		display: block;
 	}
 
-	.logoBar.ocult{
+	.btnBarBtn {
+		display: block;
+	}
+
+	.logoBar.ocult {
 		opacity: 0;
 		visibility: hidden;
 	}

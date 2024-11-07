@@ -1,4 +1,4 @@
-.wppBtn{
+.wppBtn {
     height: 70px;
     width: 70px;
     z-index: 5;
@@ -6,6 +6,7 @@
     bottom: 15px;
     right: 15px;
 }
-.wppBtn:hover{
+
+.wppBtn:hover {
     transform: scale(1.1);
 }

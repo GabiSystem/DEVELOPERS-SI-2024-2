@@ -1,11 +1,10 @@
-body{
+body {
     margin: 0;
     background-color: rgb(185, 229, 185);
 }
 
-
 .image-container img {
-    width:100vw;
+    width: 100vw;
     height: auto;
     filter: blur(5px);
 }
@@ -15,11 +14,14 @@ body{
     display: flex;
     width: max-content;
     animation: move-left 50s linear infinite;
-} 
+}
 
+@keyframes move-left {
+    0% {
+        transform: translateX(0%);
+    }
 
-
- @keyframes move-left{
-    0% { transform: translateX(0%);} 
-    100% { transform: translateX(-77.7777%);}
+    100% {
+        transform: translateX(-77.7777%);
+    }
 }
