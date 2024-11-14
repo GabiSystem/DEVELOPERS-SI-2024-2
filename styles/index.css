@@ -1,0 +1,58 @@
+.indexRoot {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: #ececec;
+    height: 100%;
+}
+
+#titulo {
+    all: unset;
+    font-size: 2em;
+    color: rgb(74, 171, 226);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 1em;
+    height: 5em;
+}
+
+.indexImgContainer {
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    column-gap: 5em;
+    align-items: center;
+    background-color: #b8b5b53b;
+}
+
+#imgTitle {
+    width: 100%;
+    height: 40vh;
+}
+
+.indexImg {
+    height: 14em;
+    width: 14em;
+    background-color: aqua;
+    border-radius: 2px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.indexImg:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+@media screen and (max-width:850px) {
+    .indexImgContainer {
+        height: fit-content;
+        flex-wrap: wrap;
+    }
+}
