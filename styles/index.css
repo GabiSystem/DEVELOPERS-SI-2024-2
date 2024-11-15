@@ -89,18 +89,13 @@
     transform: scale(1);
 }
 
-.indexImg:hover {
-    transform: scale(1.05);
-    transition: 0.3s;
-    cursor: pointer;
-}
-
 .indexImg img {
     height: 14em;
 }
 
 .indexLink {
     position: absolute;
+    z-index: 2;
     top: 50%;
     left: 50%;
     width: 70%;
@@ -113,8 +108,37 @@
     transform: translate(-50%, 4em);
 }
 
+.imgLink {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -13em);
+    max-height: 4.5em;
+    width: 4.5em;
+    max-width: 4.5em;
+}
+
+/*animaçoes das imagens link*/
+
+.indexImg:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/*
+.imgHref:hover {
+    filter: brightness(80%);
+}*/
+
 .indexImg:hover .indexLink {
     transform: translate(-50%, 2em);
+    transition: 0.5s;
+}
+
+.indexImg:hover .imgLink {
+    transform: translate(-50%, -6em);
     transition: 0.5s;
 }
 
