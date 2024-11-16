@@ -13,7 +13,7 @@
     <link rel="Stylesheet" href="styles/structure.css">
     <link rel="Stylesheet" href="styles/background.css">
     <link rel="Stylesheet" href="styles/downBar.css">
-
+    <link rel="stylesheet" href="styles/services.css">
     <script src="scripts/menuBtn.js"></script>
 </head>
 
@@ -68,7 +68,29 @@
     </div>
 
     <div class="centerPage"> <!-- Aqui fica toda a estrutura de cada página especifica -->
-        PAGINA PRINCIPAL SERÁ ESCRITA AQUI
+        <div class="servicesRoot">
+            <div class="servicesHeader">
+                <h1>Nossos Serviços</h1>
+            </div>
+            <div class="servicesCardContainer">
+                <!--As funcoes deste codigo estão em servicoJS-->
+                <div class="cardInfoContainer">
+                    <div class="cardServices" id="cardCas">
+                        <button class="btnServ" id="btnCasE" onclick="alterarCas(0)">Esq</button>
+                        <button class="btnServ" id="btnCasD" onclick="alterarCas(1)">dir</button>
+                    </div>
+                    <div class="cardTxt">
+                        <h2>Casamento</h2>
+                        <p>Descricao sobre o servico '?'</p>
+                    </div>
+                    <a href="">Entre em contato!</a>
+                </div>
+                <div class="cardInfoContainer">
+                    <div class="cardServices"></div>
+                </div>
+            </div>
+
+        </div>
     </div>
     <div style="position: relative;">
         <footer id="footerId" class="footerClass"> <!-- Aqui fica toda a estrutura da barra inferior da página -->
@@ -126,6 +148,7 @@
             </div>
         </footer>
     </div>
+    <script src="./scripts/servicoJS.js"></script>
 </body>
 
 </html>

@@ -55,7 +55,6 @@
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.911);
     background-color: rgba(0, 0, 0, 0.5);
-
 }
 
 #indexSubtitulo {
@@ -65,10 +64,9 @@
 
 .indexImgContainer {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     height: 40vh;
-    column-gap: 5em;
     background-color: #ececec;
 }
 
@@ -83,14 +81,15 @@
     align-items: center;
     width: 14em;
     height: 14em;
+    max-width: 14em;
     background-color: #000000;
     border-radius: 2px;
     overflow: hidden;
     transform: scale(1);
 }
 
-.indexImg img {
-    height: 14em;
+.imgHref {
+    max-height: 14em;
 }
 
 .indexLink {
@@ -104,8 +103,9 @@
     color: #fff;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    background-color: #000000;
-    transform: translate(-50%, 4em);
+    background-color: rgba(0, 0, 0, 0.7);
+    /*transform: translate(-50%, 4em);*/
+    transform: translate(-50%, 2em);
 }
 
 .imgLink {
@@ -124,28 +124,32 @@
 .indexImg:hover {
     transform: scale(1.05);
     transition: 0.3s;
-    cursor: pointer;
 }
 
-/*
-.imgHref:hover {
-    filter: brightness(80%);
-}*/
-
-.indexImg:hover .indexLink {
+/*.indexImg:hover .indexLink {
     transform: translate(-50%, 2em);
     transition: 0.5s;
-}
+}*/
 
 .indexImg:hover .imgLink {
     transform: translate(-50%, -6em);
     transition: 0.5s;
 }
 
+.indexImg:hover .imgHref {
+    filter: brightness(80%);
+}
+
 @media screen and (max-width: 850px) {
     .indexImgContainer {
         height: fit-content;
+        row-gap: 0.5em;
+        padding: 2em;
         flex-wrap: wrap;
+    }
+
+    .imgLink {
+        transform: translate(-50%, -6em);
     }
 
     .indexLink {

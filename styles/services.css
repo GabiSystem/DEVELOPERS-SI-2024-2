@@ -1,6 +1,5 @@
 .servicesRoot {
     display: flex;
-    justify-content: space-between;
     height: 100%;
     width: 100%;
     background-color: aliceblue;
@@ -8,4 +7,80 @@
     height: 120vh;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
+}
+
+.servicesHeader {
+    background-color: rgba(180, 54, 54, 0.168);
+    height: 10rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicesCardContainer {
+    min-height: 100%;
+    width: 100%;
+    background-color: brown;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.cardInfoContainer {
+    width: 20rem;
+    height: 40em;
+    background-color: gray;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardServices {
+    height: 25rem;
+    width: 20rem;
+    background-color: white;
+    border-radius: 4px;
+    overflow: hidden;
+    transform: scale(1);
+}
+
+.cardTxt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardInfoContainer:nth-child(1),
+.cardInfoContainer:nth-child(2) {
+    margin-top: 2em;
+}
+
+.cardServices img {
+    height: 25rem;
+    width: 20rem;
+}
+
+.btnServ {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    cursor: pointer;
+    background-color: black;
+    height: 2em;
+    width: 3em;
+}
+
+
+
+#btnCasD {
+    background-color: red;
+    transform: translate(2em, 12.5em);
+}
+
+#btnCasE {
+    background-color: green;
+    transform: translate(-5em, 12.5em);
 }
